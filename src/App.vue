@@ -3,7 +3,7 @@
     <div class="container">
       <!-- 左侧分类侧边栏 -->
       <aside class="sidebar">
-        <div class="sidebar-header">22JOB FAMILIES</div>
+        <div class="sidebar-header">99JOB FAMILIES</div>
         <ul class="category-list">
           <li
             v-for="cat in categoryList"
@@ -17,7 +17,7 @@
         </ul>
       </aside>
 
-      <!-- 右侧岗位卡片区域 -->
+      <!-- 右侧岗位卡片 -->
       <main class="job-wrap">
         <div class="match-text">
           匹配到 <span class="num">{{ filterJobs.length }}</span> 个岗位
@@ -27,7 +27,7 @@
             <div class="star-icon">☆</div>
             <h3 class="card-title">{{ job.title }}</h3>
             <div class="tag-row top-tag">
-              <span class="salary" :class="{ask: job.salary === '面议'}">{{ job.salary }}</span>
+              <span class="salary" :class="{ ask: job.salary === '面议' }">{{ job.salary }}</span>
               <span class="tag">{{ job.tag1 }}</span>
               <span v-if="job.tag2" class="tag purple-tag">{{ job.tag2 }}</span>
             </div>
@@ -36,7 +36,6 @@
             </div>
             <div class="divider"></div>
             <div class="btn-group">
-              <!-- 点击查看详情，传入当前job对象 -->
               <button class="btn outline-btn" @click="openDetail(job)">查看详情</button>
               <button class="btn primary-btn">立即投递</button>
             </div>
@@ -45,7 +44,7 @@
       </main>
     </div>
 
-    <!-- ========== JD详情弹窗 ========== -->
+    <!-- JD弹窗 -->
     <div v-if="showModal" class="modal-mask" @click.self="closeModal">
       <div class="modal-wrap">
         <div class="modal-header">
@@ -63,14 +62,11 @@
 <script setup>
 import { ref, computed } from 'vue'
 
-// 当前激活分类
 const activeKey = ref('all')
-
-// 弹窗控制
 const showModal = ref(false)
-const currentJob = ref({}) // 保存当前选中岗位对象
+const currentJob = ref({})
 
-// 侧边栏分类静态数据
+// 分类数据
 const categoryList = ref([
   { key: 'all', label: '全部岗位', count: 254 },
   { key: 'ai', label: 'AI / AIGC', count: 36 },
@@ -83,7 +79,7 @@ const categoryList = ref([
   { key: 'market', label: '商务市场', count: 16 }
 ])
 
-// 岗位静态数据，新增 jd 字段存放岗位详情
+// 岗位静态数据
 const jobList = ref([
   {
     id: 1,
@@ -137,20 +133,16 @@ const jobList = ref([
   }
 ])
 
-// 前端静态过滤
+// 前端过滤
 const filterJobs = computed(() => {
-  if (activeKey.value === 'all') {
-    return jobList.value
-  }
+  if (activeKey.value === 'all') return jobList.value
   return jobList.value.filter(item => item.cat === activeKey.value)
 })
 
-// 打开弹窗，接收当前job对象
 const openDetail = (job) => {
   currentJob.value = job
   showModal.value = true
 }
-// 关闭弹窗
 const closeModal = () => {
   showModal.value = false
   currentJob.value = {}
@@ -255,6 +247,7 @@ const closeModal = () => {
   display: flex;
   gap: 10px;
   margin-bottom:14px;
+  flex-wrap: wrap;
 }
 .salary {
   font-size:18px;
@@ -307,7 +300,7 @@ const closeModal = () => {
   font-weight:bold;
 }
 
-/* =========弹窗样式========= */
+/* 弹窗 */
 .modal-mask {
   position: fixed;
   top: 0;
@@ -357,5 +350,37 @@ const closeModal = () => {
   white-space: pre‑line;
   line-height: 1.8;
   color:#cbd5e1;
+}
+
+/* =========移动端适配 小于768px手机========= */
+@media (max-width: 768px) {
+  .job-page {
+    padding:16px;
+  }
+  .container {
+    flex-direction: column;
+    gap:20px;
+  }
+  .sidebar {
+    width:100%;
+  }
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+  .job-card {
+    padding:18px;
+  }
+  .card-title {
+    font-size:18px;
+  }
+  .btn-group {
+    flex-direction: column;
+  }
+  .modal-header {
+    padding:14px 16px;
+  }
+  .modal-body {
+    padding:16px;
+  }
 }
 </style>

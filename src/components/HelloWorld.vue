@@ -54,12 +54,12 @@ const filterJobs = computed(()=>{
     <!-- ========== 顶部导航 ========== -->
     <header class="border-b border-slate-700/60 px-6 py-4 sticky top-0 z-10 bg-darkBg/90 backdrop-blur">
       <div class="max-w-7xl mx-auto flex justify-between items-center">
-        <div class="text-xl font-bold text-neonCyan">LUMENIX 灵影科技</div>
+        <div class="text-xl font-bold text-neonCyan">FineStar 梵星科技</div>
         <nav class="hidden md:flex gap-7 text-sm text-slate-300">
-          <a href="#about" class="hover:text-neonCyan transition">About Lumenix</a>
+          <a href="#about" class="hover:text-neonCyan transition">About FineStar</a>
           <a href="#business" class="hover:text-neonCyan transition">Business Lines</a>
           <a href="#terms" class="hover:text-neonCyan transition">Working Terms</a>
-          <a href="#why" class="hover:text-neonCyan transition">Why Lumenix</a>
+          <a href="#why" class="hover:text-neonCyan transition">Why FineStar</a>
           <a href="#roles" class="text-neonCyan font-semibold">Open Roles</a>
         </nav>
       </div>
@@ -68,8 +68,8 @@ const filterJobs = computed(()=>{
     <!-- ========== Hero 首页头部 ========== -->
     <section class="max-w-7xl mx-auto px-6 py-16">
       <div class="mb-4 text-neonCyan text-sm tracking-widest">GLOBAL REMOTE HIRING · 2026</div>
-      <h1 class="text-5xl font-bold mb-3">LUMENIX</h1>
-      <h2 class="text‑2xl text‑slate‑200 mb‑4">灵影科技</h2>
+      <h1 class="text-5xl font-bold mb-3">FineStar</h1>
+      <h2 class="text‑2xl text‑slate‑200 mb‑4">梵星科技</h2>
       <p class="text-slate‑400 text-lg mb‑6">Global Remote Careers · AI · Game · Blockchain · Entertainment</p>
 
       <div class="flex gap‑4 mb‑10">
@@ -97,13 +97,13 @@ const filterJobs = computed(()=>{
       </div>
     </section>
 
-    <!-- ========== About Lumenix ========== -->
+    <!-- ========== About FineStar ========== -->
     <section id="about" class="max‑w‑7xl mx‑auto px‑6 py‑14 border‑t border‑slate‑700/50">
-      <h2 class="text‑2xl font‑bold mb‑6">About Lumenix</h2>
+      <h2 class="text‑2xl font‑bold mb‑6">About FineStar</h2>
       <h3 class="text‑3xl font‑semibold mb‑4">把分散在全球的光聚到一处</h3>
       <p class="text‑slate‑400 mb‑2">One team, seven time zones</p>
       <p class="text‑slate‑300 leading‑relaxed max‑w‑4xl">
-        Lumenix 灵影科技是一家以远程协作为默认工作方式的科技集团。团队分布在英国、美国与台湾三大枢纽，2000 余名成员在各自的时区推进同一套产品线：AI 应用、游戏研发、区块链基础设施与全球内容平台。
+        FineStar 梵星科技是一家以远程协作为默认工作方式的科技集团。团队分布在英国、美国与台湾三大枢纽，2000 余名成员在各自的时区推进同一套产品线：AI 应用、游戏研发、区块链基础设施与全球内容平台。
         <br /><br />
         我们不设打卡机器，也不用工位衡量产出。你在哪里工作不重要，你交付什么才重要。
       </p>
@@ -125,13 +125,13 @@ const filterJobs = computed(()=>{
         </div>
         <div class="p‑6 rounded‑xl bg‑cardBg border border‑slate‑700 hover:border‑neonCyan/40 transition">
           <div class="text‑4xl mb‑3">⛓️</div>
-          <h3 class="text‑xl font‑semibold mb‑2">区块链 <span class="text‑slate‑400 text‑base">Blockchain</span></h3>
+          <h3 class="text‑xl font‑semibold mb‑2">区 块 链 <span class="text‑slate‑400 text‑base">Blockchain</span></h3>
           <p class="text‑slate‑400">自研钱包与链上结算体系，已稳定运行多年。</p>
         </div>
         <div class="p‑6 rounded‑xl bg‑cardBg border border‑slate‑700 hover:border‑neonCyan/40 transition">
           <div class="text‑4xl mb‑3">🎬</div>
-          <h3 class="text‑xl font‑semibold mb‑2">视频 <span class="text‑slate‑400 text‑base">Video Platform</span></h3>
-          <p class="text‑slate‑400">面向全球市场的视频内容平台与多渠道分发矩阵。</p>
+          <h3 class="text‑xl font‑semibold mb‑2">视 频 <span class="text‑slate‑400 text‑base">Video Platform</span></h3>
+          <p class="text‑slate‑400">面向全球市场的视 频内容平台与多渠道分发矩阵。</p>
         </div>
       </div>
     </section>
@@ -178,9 +178,9 @@ const filterJobs = computed(()=>{
       </div>
     </section>
 
-    <!-- ========== Why Lumenix 六大理由 ========== -->
+    <!-- ========== Why FineStar 六大理由 ========== -->
     <section id="why" class="max‑w‑7xl mx‑auto px‑6 py‑14 border‑t border‑slate‑700/50">
-      <h2 class="text‑2xl font‑bold mb‑2">Why Lumenix</h2>
+      <h2 class="text‑2xl font‑bold mb‑2">Why FineStar</h2>
       <p class="text‑slate‑400 mb‑8">六个留下来的理由 &nbsp;·&nbsp; Built for people who ship</p>
       <div class="grid md:grid‑cols‑2 xl:grid‑cols‑3 gap‑6">
         <div class="p‑6 rounded‑xl bg‑cardBg border border‑slate‑700">
@@ -269,7 +269,7 @@ const filterJobs = computed(()=>{
 
     <!-- ========== Footer底部 ========== -->
     <footer class="border‑t border‑slate‑700 mt‑12 py‑8 text‑center text‑slate‑500 text‑sm">
-      <p>©2026 LUMENIX TECHNOLOGY ALL RIGHTS RESERVED</p>
+      <p>©2026 FineStar TECHNOLOGY ALL RIGHTS RESERVED</p>
       <p class="mt‑1">REMOTE FIRST‑LONDON / LOS ANGELES / TAIWAN</p>
     </footer>
   </div>
