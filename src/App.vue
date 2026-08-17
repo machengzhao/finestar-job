@@ -1,47 +1,73 @@
 <template>
   <div class="job-page">
-    <div class="container">
-      <!-- 左侧分类侧边栏 -->
-      <aside class="sidebar">
-        <div class="sidebar-header">99JOB FAMILIES</div>
-        <ul class="category-list">
-          <li
-            v-for="cat in categoryList"
-            :key="cat.key"
-            @click="activeKey = cat.key"
-            :class="['category-item', activeKey === cat.key ? 'active' : '']"
-          >
-            <span class="label">{{ cat.label }}</span>
-            <span class="count">{{ cat.count }}</span>
-          </li>
-        </ul>
-      </aside>
+    <!-- 头部 -->
+    <Header />
+    <div class="con_box">
+      <!-- 关于我们 -->
+      <AboutAs class="about"/> 
+      <Time/>
+      <Team/>
+      
 
-      <!-- 右侧岗位卡片 -->
-      <main class="job-wrap">
-        <div class="match-text">
-          匹配到 <span class="num">{{ filterJobs.length }}</span> 个岗位
+      <!-- 在招职位 -->
+        <div class="container">
+           
+            <!-- 过滤栏组件 -->
+            <Jobs @filter-change="onFilterChange" />
+
+            <!-- 匹配数量 -->
+            <!-- <div class="match-count">匹配到 {{ displayJobs.length }} 个岗位</div> -->
+
+            <!-- 岗位卡片网格 -->
+            <!-- <div class="job-card-grid">
+              <div v-for="item in displayJobs" :key="item.id">
+              
+              </div>
+            </div> -->
+          
+          
+          <!-- 左侧分类侧边栏 -->
+          <!-- <aside class="sidebar">
+            <div class="sidebar-header">99JOB FAMILIES</div>
+            <ul class="category-list">
+              <li
+                v-for="cat in categoryList"
+                :key="cat.key"
+                @click="activeKey = cat.key"
+                :class="['category-item', activeKey === cat.key ? 'active' : '']"
+              >
+                <span class="label">{{ cat.label }}</span>
+                <span class="count">{{ cat.count }}</span>
+              </li>
+            </ul>
+          </aside> -->
+
+          <!-- 右侧岗位卡片 -->
+          <!-- <main class="job-wrap">
+            <div class="match-text">
+              匹配到 <span class="num">{{ filterJobs.length }}</span> 个岗位
+            </div>
+            <div class="card-grid">
+              <div v-for="job in filterJobs" :key="job.id" class="job-card">
+                <div class="star-icon">☆</div>
+                <h3 class="card-title">{{ job.title }}</h3>
+                <div class="tag-row top-tag">
+                  <span class="salary" :class="{ ask: job.salary === '面议' }">{{ job.salary }}</span>
+                  <span class="tag">{{ job.tag1 }}</span>
+                  <span v-if="job.tag2" class="tag purple-tag">{{ job.tag2 }}</span>
+                </div>
+                <div class="tag-row">
+                  <span class="tag gray-tag">{{ job.department }}</span>
+                </div>
+                <div class="divider"></div>
+                <div class="btn-group">
+                  <button class="btn outline-btn" @click="openDetail(job)">查看详情</button>
+                  <button class="btn primary-btn">立即投递</button>
+                </div>
+              </div>
+            </div>
+          </main> -->
         </div>
-        <div class="card-grid">
-          <div v-for="job in filterJobs" :key="job.id" class="job-card">
-            <div class="star-icon">☆</div>
-            <h3 class="card-title">{{ job.title }}</h3>
-            <div class="tag-row top-tag">
-              <span class="salary" :class="{ ask: job.salary === '面议' }">{{ job.salary }}</span>
-              <span class="tag">{{ job.tag1 }}</span>
-              <span v-if="job.tag2" class="tag purple-tag">{{ job.tag2 }}</span>
-            </div>
-            <div class="tag-row">
-              <span class="tag gray-tag">{{ job.department }}</span>
-            </div>
-            <div class="divider"></div>
-            <div class="btn-group">
-              <button class="btn outline-btn" @click="openDetail(job)">查看详情</button>
-              <button class="btn primary-btn">立即投递</button>
-            </div>
-          </div>
-        </div>
-      </main>
     </div>
 
     <!-- JD弹窗 -->
@@ -56,108 +82,184 @@
         </div>
       </div>
     </div>
+
+    <!-- 底部 -->
+    <Footer />
+    <Btn2 />
   </div>
 </template>
 
 <script setup>
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
+import AboutAs from './components/AboutAs.vue'
+import Time from './components/Time.vue'
+import Team from './components/Team.vue'
+import Jobs from './components/Jobs.vue'
+import Btn2 from './components/Btn2.vue'
+
 import { ref, computed } from 'vue'
+ 
 
-const activeKey = ref('all')
-const showModal = ref(false)
-const currentJob = ref({})
+// const activeKey = ref('all')
+// const showModal = ref(false)
+// const currentJob = ref({})
 
-// 分类数据
-const categoryList = ref([
-  { key: 'all', label: '全部岗位', count: 254 },
-  { key: 'ai', label: 'AI / AIGC', count: 36 },
-  { key: 'dev', label: '技术研发', count: 58 },
-  { key: 'product', label: '产品', count: 18 },
-  { key: 'operate', label: '运营增长', count: 53 },
-  { key: 'video', label: '视频内容', count: 12 },
-  { key: 'ui', label: 'UI设计', count: 15 },
-  { key: 'game', label: '游戏', count: 20 },
-  { key: 'market', label: '商务市场', count: 16 }
+// 全部原始岗位数据
+const originJobList = ref([
+//   { key: 'all', label: '全部岗位', count: 254 },
+//   { key: 'ai', label: 'AI / AIGC', count: 36 },
+//   { key: 'dev', label: '技术研发', count: 58 },
+//   { key: 'product', label: '产品', count: 18 },
+//   { key: 'operate', label: '运营增长', count: 53 },
+//   { key: 'video', label: '视频内容', count: 12 },
+//   { key: 'ui', label: 'UI设计', count: 15 },
+//   { key: 'game', label: '游戏', count: 20 },
+//   { key: 'market', label: '商务市场', count: 16 }
 ])
 
-// 岗位静态数据
-const jobList = ref([
-  {
-    id: 1,
-    title: '产品架构师 Product Architect',
-    cat: 'product',
-    salary: '面议',
-    tag1: 'REMOTE',
-    tag2: 'FULL JD',
-    department: 'PRODUCT',
-    jd: `【岗位职责】
-1、负责整体产品架构设计，梳理业务流程；
-2、对接研发团队输出产品方案；
-3、跨团队协同推进项目落地。
-
-【任职要求】
-1、5年以上互联网产品经验；
-2、具备大型系统架构设计经验；
-3、远程办公，具备良好沟通能力。`
-  },
-  {
-    id: 2,
-    title: '高级产品专家',
-    cat: 'product',
-    salary: '35K‑50K',
-    tag1: 'REMOTE',
-    tag2: '',
-    department: 'PRODUCT',
-    jd: `【岗位职责】
-1、负责业务产品需求调研、方案设计；
-2、跟进迭代，分析数据持续优化产品；
-
-【任职要求】
-1、3‑5年B端产品经验；
-2、独立负责过完整项目。`
-  },
-  {
-    id: 3,
-    title: 'AI大模型工程师',
-    cat: 'ai',
-    salary: '40K‑60K',
-    tag1: 'REMOTE',
-    tag2: '',
-    department: 'AI / AIGC',
-    jd: `【岗位职责】
-1、大模型应用开发，Prompt工程；
-2、对接业务场景做模型调优。
-
-【任职要求】
-1、熟悉大模型相关技术栈；
-2、Python开发基础。`
-  }
-])
-
-// 前端过滤
-const filterJobs = computed(() => {
-  if (activeKey.value === 'all') return jobList.value
-  return jobList.value.filter(item => item.cat === activeKey.value)
+// 保存筛选条件
+const filterState = ref({
+  keyword: '',
+  salary: 'all',
+  workMode: 'all'
 })
 
-const openDetail = (job) => {
-  currentJob.value = job
-  showModal.value = true
+const onFilterChange = (payload) => {
+  filterState.value = payload
 }
-const closeModal = () => {
-  showModal.value = false
-  currentJob.value = {}
-}
+
+// 计算属性过滤
+const displayJobs = computed(() => {
+  const { keyword, salary, workMode } = filterState.value
+  return originJobList.value.filter(job => {
+    // 搜索岗位名称
+    if (keyword) {
+      const title = job.title ?? ''
+      if (!title.toLowerCase().includes(keyword.toLowerCase())) return false
+    }
+
+    // 薪资过滤，根据你业务字段自行修改判断
+    if (salary !== 'all') {
+      if (job.salaryTag !== salary) return false
+    }
+
+    // 工作模式过滤 remote / onsite
+    if (workMode !== 'all') {
+      if (job.mode !== workMode) return false
+    }
+
+    return true
+  })
+})
+
+// // 分类数据
+// const categoryList = ref([
+//   { key: 'all', label: '全部岗位', count: 254 },
+//   { key: 'ai', label: 'AI / AIGC', count: 36 },
+//   { key: 'dev', label: '技术研发', count: 58 },
+//   { key: 'product', label: '产品', count: 18 },
+//   { key: 'operate', label: '运营增长', count: 53 },
+//   { key: 'video', label: '视频内容', count: 12 },
+//   { key: 'ui', label: 'UI设计', count: 15 },
+//   { key: 'game', label: '游戏', count: 20 },
+//   { key: 'market', label: '商务市场', count: 16 }
+// ])
+
+// // 岗位静态数据
+// const jobList = ref([
+//   {
+//     id: 1,
+//     title: '产品架构师 Product Architect',
+//     cat: 'product',
+//     salary: '面议',
+//     tag1: 'REMOTE',
+//     tag2: 'FULL JD',
+//     department: 'PRODUCT',
+//     jd: `【岗位职责】
+// 1、负责整体产品架构设计，梳理业务流程；
+// 2、对接研发团队输出产品方案；
+// 3、跨团队协同推进项目落地。
+
+// 【任职要求】
+// 1、5年以上互联网产品经验；
+// 2、具备大型系统架构设计经验；
+// 3、远程办公，具备良好沟通能力。`
+//   },
+//   {
+//     id: 2,
+//     title: '高级产品专家',
+//     cat: 'product',
+//     salary: '35K‑50K',
+//     tag1: 'REMOTE',
+//     tag2: '',
+//     department: 'PRODUCT',
+//     jd: `【岗位职责】
+// 1、负责业务产品需求调研、方案设计；
+// 2、跟进迭代，分析数据持续优化产品；
+
+// 【任职要求】
+// 1、3‑5年B端产品经验；
+// 2、独立负责过完整项目。`
+//   },
+//   {
+//     id: 3,
+//     title: 'AI大模型工程师',
+//     cat: 'ai',
+//     salary: '40K‑60K',
+//     tag1: 'REMOTE',
+//     tag2: '',
+//     department: 'AI / AIGC',
+//     jd: `【岗位职责】
+// 1、大模型应用开发，Prompt工程；
+// 2、对接业务场景做模型调优。
+
+// 【任职要求】
+// 1、熟悉大模型相关技术栈；
+// 2、Python开发基础。`
+//   }
+// ])
+
+// // 前端过滤
+// const filterJobs = computed(() => {
+//   if (activeKey.value === 'all') return jobList.value
+//   return jobList.value.filter(item => item.cat === activeKey.value)
+// })
+
+// const openDetail = (job) => {
+//   currentJob.value = job
+//   showModal.value = true
+// }
+// const closeModal = () => {
+//   showModal.value = false
+//   currentJob.value = {}
+// }
 </script>
 
 <style scoped>
 .job-page {
   background: #0b1122;
   color: #e4e8f0;
-  padding: 24px;
+  /* padding: 24px; */
 }
+</style>
+<!-- 
 .container {
   display: flex;
   gap: 28px;
+    /* padding-top: 88px; */
+  /* 2. 宽度100%占满，取消max-width限制，铺满屏幕 */
+  width: 100%;
+  max-width: unset !important;
+  box-sizing: border-box;
+  padding: 60px 40px 30px;
+}
+.about{
+    padding-top: 88px;
+  /* 2. 宽度100%占满，取消max-width限制，铺满屏幕 */
+  width: 100%;
+  max-width: unset !important;
+  box-sizing: border-box;
 }
 
 /* 侧边栏 */
@@ -383,4 +485,4 @@ const closeModal = () => {
     padding:16px;
   }
 }
-</style>
+</style> -->
