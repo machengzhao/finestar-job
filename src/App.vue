@@ -3,7 +3,7 @@
     <div class="container">
       <!-- 左侧分类侧边栏 -->
       <aside class="sidebar">
-        <div class="sidebar-header">111JOB FAMILIES</div>
+        <div class="sidebar-header">22JOB FAMILIES</div>
         <ul class="category-list">
           <li
             v-for="cat in categoryList"
