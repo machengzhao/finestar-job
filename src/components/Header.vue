@@ -12,11 +12,16 @@
 
       <!-- 导航菜单 -->
       <nav class="nav-menu">
-        <router-link to="/about" class="nav-item">关于我们</router-link>
+        <div class="nav-item" @click="scrollToId('AboutAs')">关于我们</div>
+        <div class="nav-item" @click="scrollToId('Time')">工作制度</div>
+        <div class="nav-item" @click="scrollToId('Team')">团队优势</div>
+        <div class="nav-item" @click="scrollToId('Jobs')">在招岗位</div>
+        <div class="nav-item" @click="scrollToId('Contact')">联系我们</div>
+        <!-- <router-link to="/about" class="nav-item">关于我们</router-link>
         <router-link to="/policy" class="nav-item">工作制度</router-link>
         <router-link to="/advantage" class="nav-item">团队优势</router-link>
         <router-link to="/jobs" class="nav-item">在招岗位</router-link>
-        <router-link to="/contact" class="nav-item">联系我们</router-link>
+        <router-link to="/contact" class="nav-item">联系我们</router-link> -->
       </nav>
     </div>
   </header>
@@ -24,6 +29,18 @@
 
 <script setup>
 // 如果不需要逻辑，这里留空即可
+const scrollToId = (id) => {
+  const el = document.getElementById(id)
+  if (!el) return
+  // header高度假设80px，减去固定头部高度，防止内容被挡住
+  const headerHeight = 80
+  const top = el.offsetTop - headerHeight
+
+  window.scrollTo({
+    top: top,
+    behavior: 'smooth' //平滑滚动
+  })
+}
 </script>
 
 <style scoped>
@@ -64,6 +81,7 @@
   gap: 48px;
 }
 .nav-item {
+  cursor: pointer;
   font-size: 22px;
   color: #cbd5e1;
   text-decoration: none;

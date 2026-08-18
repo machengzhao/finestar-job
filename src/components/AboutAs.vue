@@ -86,11 +86,11 @@
           <div class="biz-header">
             <span class="biz-icon">🎬</span>
             <div>
-              <div class="biz-title">视频</div>
+              <div class="biz-title">影视直播 社区 交友</div>
               <div class="biz-en">VIDEO PLATFORM</div>
             </div>
           </div>
-          <p class="biz-desc">面向全球市场的视频内容平台与多渠道分发矩阵。</p>
+          <p class="biz-desc">面向全球市场的影音社区内容-交友平台与多渠道分发矩阵。</p>
         </div>
       </div>
     </div>
@@ -106,6 +106,7 @@
   color: #fff;
 }
 .en-title {
+  margin-top: 5rem!important;
   font-size: 140px;
   font-weight: 700;
   color: #f0f2f8;
