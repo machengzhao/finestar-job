@@ -16,7 +16,7 @@
           <div class="card-en">WORKING HOURS</div>
           <ul class="card-list">
             <li>每日 10:00‑22:00</li>
-            <li>午休 2小时，晚休 60分钟</li>
+            <li>午休 2小时，晚休60分钟,每日9h</li>
             <li>周六 19:00 下班，周日固定休息</li>
             <li>每月 4天 可自主安排的月休</li>
           </ul>
@@ -46,7 +46,7 @@
           <h3 class="card-title">办公地点</h3>
           <div class="card-en">LOCATIONS</div>
           <ul class="card-list">
-            <li>Remote — 全球远程优先</li>
+            <li>Remote — 全球远程优先!!</li>
             <li>London 伦敦枢纽</li>
             <li>Los Angeles 洛杉矶枢纽</li>
             <li>Taiwan 台湾枢纽</li>
