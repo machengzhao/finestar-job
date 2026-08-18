@@ -5,9 +5,9 @@
      到顶部
     </button>
 
-    <!-- 联系跳转百度 -->
+    <!-- 联系  -->
     <a style="cursor: pointer;" class="float-btn contact" href="https://t.me/remote0007_jobs" target="_blank"  >
-      TG
+      TG投递
     </a>
   </div>
 </template>
@@ -49,7 +49,7 @@ onUnmounted(() => {
 }
 
 .float-btn {
-  width: 56px;
+  width: 76px;
   height: 56px;
   border-radius: 12px;
   border: none;

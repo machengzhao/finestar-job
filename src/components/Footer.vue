@@ -28,8 +28,18 @@
       <!-- CONTACT 中间菜单2 -->
       <div class="footer-col">
         <h4 class="footer-title">CONTACT</h4>
-        <div class="footer-link">直招频道 <span class="red-text">@remote0007</span></div>
-        <div class="footer-link">HR Rocky <span class="red-text">@remote0007_jobs</span></div>
+        <div class="footer-link">直招频道 <span class="red-text">@
+              <a style="cursor: pointer;" class="float-btn contact" href="https://t.me/remote0007" target="_blank"  >
+      remote0007
+    </a>
+
+        </span></div>
+        <div class="footer-link">HR Rocky <span class="red-text">
+                <a style="cursor: pointer;" class="float-btn contact" href="https://t.me/remote0007_jobs" target="_blank"  >
+      remote0007_jobs
+    </a>
+
+            @</span></div>
       </div>
 
       <!-- REMOTE FIRST 时区 -->
