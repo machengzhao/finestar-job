@@ -15,10 +15,11 @@
           <h3 class="card-title">工作时间</h3>
           <div class="card-en">WORKING HOURS</div>
           <ul class="card-list">
+            <li class="red">午休 2小时，晚休1小时,每日H</li>
             <li>每日 10:00‑22:00</li>
-            <li>午休 2小时，晚休60分钟,每日9h</li>
             <li>周六 19:00 下班，周日固定休息</li>
-            <li>每月 4天 可自主安排的月休</li>
+            <li>每月 4天,可自主安排的月休</li>
+            <li>游戏部门五天八小时双休，有的部门大小周(月休6天)</li>
           </ul>
         </div>
         <div class="term-card">
@@ -26,9 +27,12 @@
           <h3 class="card-title">节假日</h3>
           <div class="card-en">HOLIDAYS</div>
           <ul class="card-list">
-            <li>按 中国大陆法定节假日 执行</li>
+            <li class="red">按 
+              中国大陆法定节假日 执行</li>
             <li>法定节日与调休安排提前公布</li>
-            <li>三地枢纽节日互不影响交付</li>
+            <li>多地枢纽节日互不影响交付</li>
+            <li class="red">中国春节假期12天，年假12天，病假5天，陪产假+婚假</li>
+            <li>多地枢纽节日互不影响交付</li>
           </ul>
         </div>
         <div class="term-card">
@@ -36,9 +40,10 @@
           <h3 class="card-title">薪资发放</h3>
           <div class="card-en">PAYROLL</div>
           <ul class="card-list">
-            <li>每月 15日 准时发放</li>
+            <li>每月 15日 准时发放，有时会提前发</li>
             <li>结算币种 <span class="text-gold">USDT（TRC20）</span></li>
             <li>入职即明确薪资构成，无隐藏条款</li>
+            <li class="red">无需实名入职，无需提供任何个人资料，无押金无需购买任何设备，入职TG办理</li>
           </ul>
         </div>
         <div class="term-card">
@@ -49,7 +54,11 @@
             <li>Remote — 全球远程优先!!</li>
             <li>London 伦敦枢纽</li>
             <li>Los Angeles 洛杉矶枢纽</li>
+            <li>Tokyo 东京枢纽</li>
+            <li>Seoul 首尔枢纽</li>
+            <li>Malaysia 马来枢纽</li>
             <li>Taiwan 台湾枢纽</li>
+            <li>Shanghai 上海枢纽</li>
           </ul>
         </div>
       </div>
@@ -173,5 +182,8 @@
 }
 .text-gold {
   color:#ffc145;
+}
+.card-list .red{
+  color: red;
 }
 </style>

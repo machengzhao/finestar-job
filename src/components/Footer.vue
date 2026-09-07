@@ -12,7 +12,7 @@
         </div>
         <div class="desc">
           梵星科技｜全球远程招聘<br/>
-          以远程为默认的全球科技团队，业务覆盖 AI、游戏、区块链与内容平台。
+          以远程为默认的全球科技团队，业务覆盖 AI人工智能、游戏、区块链与内容社交平台。
         </div>
       </div>
 
@@ -28,18 +28,18 @@
       <!-- CONTACT 中间菜单2 -->
       <div class="footer-col">
         <h4 class="footer-title">CONTACT</h4>
-        <div class="footer-link">直招频道 <span class="red-text">@
+        <div class="footer-link">  TG  直招频道 <span class="red-text">@
               <a style="cursor: pointer;" class="float-btn contact" href="https://t.me/remote0007" target="_blank"  >
       remote0007
     </a>
 
         </span></div>
-        <div class="footer-link">HR Rocky <span class="red-text">
+        <div class="footer-link">HR直招Rocky <span class="red-text">
                 <a style="cursor: pointer;" class="float-btn contact" href="https://t.me/remote0007_jobs" target="_blank"  >
-      remote0007_jobs
+      @remote0007_jobs
     </a>
 
-            @</span></div>
+            </span></div>
       </div>
 
       <!-- REMOTE FIRST 时区 -->
@@ -48,6 +48,7 @@
         <div class="footer-link">• LONDON GMT+0</div>
         <div class="footer-link">• LOS ANGELES GMT−8</div>
         <div class="footer-link">• TAIWAN GMT+8</div>
+        <div class="footer-link">• ...</div>
       </div>
     </div>
 
