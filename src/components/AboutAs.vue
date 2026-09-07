@@ -17,10 +17,10 @@
     <div class="container">
       <!-- 左侧区域 -->
       <div class="left-wrap">
-        <h2 class="main-title">把分散在全球的<br />光聚到一处</h2>
+        <h2 class="main-title">把分散在全球的光聚到一处</h2>
         <div class="en-subtitle">ONE TEAM, SEVEN TIME ZONES</div>
         <div class="desc-text">
-           FineStar 梵星科技是一家以远程协作为默认工作方式的科技集团。团队分布在英国、美国与台湾三大枢纽，2000 余名成员在各自的时区推进同一套产品线：AI 应用、游戏研发、区块链基础设施与全球内容平台。
+           FineStar 梵星科技是一家以远程协作为默认工作方式的科技集团。团队分布在英国、美国、东京、首尔、马来、台湾、上海 八大枢纽，2000 余名成员在各自的时区推进同一套产品线：AI 应用、游戏研发、区块链基础设施与全球内容平台。
         </div>
         <div class="desc-text">
           我们不设打卡机器，也不用工位衡量产出。你在哪里工作不重要，你交付什么才重要。
@@ -104,28 +104,29 @@
   padding: 60px 40px;
   background-color: #0f1422;
   color: #fff;
+  padding-bottom: 40px;
 }
 .en-title {
   margin-top: 5rem!important;
-  font-size: 140px;
+  font-size: 40px;
   font-weight: 700;
   color: #f0f2f8;
   line-height: 1.1;
   margin:0 0 12px;
 }
 .cn-title {
-  font-size: 64px;
+  font-size: 20px;
   color:#28e0ff;
   margin-bottom:32px;
 }
 .sub-row {
   display:flex;
   align-items:center;
-  gap:24px;
+  gap:10px;
   margin-bottom:20px;
 }
 .sub-text {
-  font-size:42px;
+  font-size:22px;
   color:#a0b0d0;
   letter-spacing:6px;
 }
@@ -177,7 +178,7 @@
 
 /* 左侧 */
 .main-title {
-  font-size: 72px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 1.1;
   margin: 0 0 16px;
@@ -198,7 +199,7 @@
 
 /* 统计数字网格 */
 .stat-grid {
-  margin-top: 40px;
+  margin-top: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1px;
@@ -208,7 +209,7 @@
 }
 .stat-item {
   background-color: #0f1424;
-  padding: 32px 24px;
+  padding: 16px 24px;
 }
 .stat-num {
   font-size: 56px;

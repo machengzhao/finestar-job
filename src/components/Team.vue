@@ -111,7 +111,7 @@
   margin-bottom: 8px;
 }
 .main-title {
-  font-size: 72px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 1.1;
   margin: 0 0 12px;

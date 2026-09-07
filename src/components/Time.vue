@@ -15,7 +15,7 @@
           <h3 class="card-title">工作时间</h3>
           <div class="card-en">WORKING HOURS</div>
           <ul class="card-list">
-            <li class="red">午休 2小时，晚休1小时,每日H</li>
+            <li class="red">午休 2小时，晚休1小时,每日9H</li>
             <li>每日 10:00‑22:00</li>
             <li>周六 19:00 下班，周日固定休息</li>
             <li>每月 4天,可自主安排的月休</li>
@@ -87,7 +87,7 @@
   margin-bottom: 8px;
 }
 .main-title {
-  font-size: 72px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 1.1;
   margin: 0 0 12px;

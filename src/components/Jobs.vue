@@ -10716,7 +10716,7 @@ const familyCounts = computed(() => {
   letter-spacing: 2px;
 }
 .main-title {
-  font-size: 64px;
+  font-size: 20px;
   font-weight: bold;
   margin:8px 0;
 }
