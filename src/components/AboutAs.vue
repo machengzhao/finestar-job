@@ -33,7 +33,7 @@
             <div class="stat-label">全球在职员工</div>
           </div>
           <div class="stat-item">
-            <div class="stat-num">3</div>
+            <div class="stat-num">8</div>
             <div class="stat-label">洲际研发枢纽</div>
           </div>
           <div class="stat-item">
