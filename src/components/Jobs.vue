@@ -138,13 +138,13 @@ const familyList = ref([
   { key: 'yunying', label: '运营', count:  '' },
   { key: 'jianji', label: 'AI->剪辑/生成/视频制作', count: '' },
   { key: 'bianji', label: '编辑员 编辑专员', count: '' },
-  { key: 'go', label: 'go/后端', count: '' },
-  { key: 'test', label: '测试', count: '' },
-  { key: 'web', label: '前端', count: '' },
+  { key: 'go', label: 'go/后端/全栈', count: '' },
+  { key: 'test', label: '测试/安全渗透', count: '' },
+  { key: 'web', label: '前端/Java/全栈', count: '' },
   { key: 'flutter', label: '移动端', count:  '' },
   { key: 'php', label: '大数据 ios php', count: '' },
   { key: 'devops', label: '运维devops', count: '' },
-  { key: 'ai', label: 'AI / AIGC', count: '' },
+  { key: 'ai', label: 'AI / AIGC/Agent/算法', count: '' },
   { key: 'ui', label: 'UI设计', count: '' },
   { key: 'xiangmu', label: '项目', count: '' },
   { key: 'chanpin', label: '产品', count: '' },
@@ -166,6 +166,82 @@ const currentJob = ref({})
  
 const originJobs = ref([
     // 逸品 818 周二
+  {
+    title: '高级Java工程师（推荐系统、广告、搜索方向）',
+    category: 'java',
+    familyKey: 'Java',
+    salaryTag: 'negotiate',
+    remote: true,
+    company:"",
+    man: "",
+    note:"",
+    onsite: false,
+    salary: "25-40K",
+    duty: `
+    岗位职责 1. 参与项目组产品评审，根据需求进行功能梳理、开发计划及相关技术文档编写 2. 参与项目组的任务开发，包括后台模块、接口开发 3. 协作团队顺利推进项目进度，解决疑难问题 4. 在计划内协作完成项目的交互，对项目实施提供支持和优化建议。 任职要求 1. 全日制本科及以上学历，计算机、软件工程等相关专业； 2. 五年以上Java开发经验，有移动端互联网短视频相关行业经验者优先； 3. 熟练掌握 Spring Boot/Spring Cloud、Dubbo、ZooKeeper、MyBatis、MySQL、MongoDB、Redis、RabbitMQ 等技术； 4. 熟悉常见的中间件、分布式解决方案及其原理：分布式缓存、微服务、云原生、消息中间件、负载均衡、连接池等； 5. 具备较强的分析设计能力，能够根据业务需求设计合理的技术解决方案。 6. 必须要有推荐系统相关经验，内容推荐或广告推荐或搜索推荐
+    `},
+  {
+    title: '
+    全栈工程师 （后端GO）',
+    category: 'java',
+    familyKey: 'Java',
+    salaryTag: 'negotiate',
+    remote: true,
+    company:"",
+    man: "",
+    note:"",
+    onsite: false,
+    salary: "25-40K",
+    duty: `
+    岗位职责 1. 参与项目组产品评审，根据需求进行功能梳理、开发计划及相关技术文档编写 2. 参与项目组的任务开发，包括后台模块、接口开发 3. 协作团队顺利推进项目进度，解决疑难问题 4. 在计划内协作完成项目的交互，对项目实施提供支持和优化建议。 任职要求 1. 全日制本科及以上学历，计算机、软件工程等相关专业； 2. 五年以上Java开发经验，有移动端互联网短视频相关行业经验者优先； 3. 熟练掌握 Spring Boot/Spring Cloud、Dubbo、ZooKeeper、MyBatis、MySQL、MongoDB、Redis、RabbitMQ 等技术； 4. 熟悉常见的中间件、分布式解决方案及其原理：分布式缓存、微服务、云原生、消息中间件、负载均衡、连接池等； 5. 具备较强的分析设计能力，能够根据业务需求设计合理的技术解决方案。 6. 必须要有推荐系统相关经验，内容推荐或广告推荐或搜索推荐
+    `},
+  {
+    title: '高级算法工程师',
+    category: 'go',
+    familyKey: 'go',
+    salaryTag: 'negotiate',
+    remote: true,
+    company:"",
+    man: "",
+    note:"",
+    onsite: false,
+    salary: "25-40K",
+    duty: `
+    💡 岗位定位 在这里，你不仅是一个 Coder，更是业务效能的放大器。我们不需要你只做单一模块的“螺丝钉”，而是希望你能以“AI 产品工程师”的视角，主导 AI 落地，从 0 到 1 打造直接驱动业务、提升组织运转效率的智能化工具与 Agent 架构。 🛠 岗位职责 全链路交付：作为核心 Owner，独立负责 AI 效能工具及 Agent 应用的从 0 到 1 落地，涵盖需求沟通、前后端开发、API 联调与持续部署。 敏捷响应：深入业务一线，洞察业务痛点，能够以 1-2 周为周期快速构建并上线 MVP（最小可行性产品）原型，用技术手段解决实际问题。 AI 融合创新：结合 OpenAI、Claude 等大语言模型能力，设计并优化 Prompt 架构，构建具备行业深度的自动化工作流与智能 Bot。 质量与效能协同：在保障代码质量与系统安全边界的前提下，通过技术手段不断优化工具链，打破不同系统间的数据与流程孤岛。 🎯 任职要求 基础底盘：本科及以上学历（计算机相关专业优先），3 年以上研发经验（能力出众者不设限）。 后端能力：精通至少一门后端语言，Go优先，具备扎实的系统设计与问题排查能力。 前端技能：熟练掌握现代前端框架，至少精通 React 。 AI 核心素质（硬性要求）： 具备丰富的大模型（LLM）实际调用与调优经验。 深刻理解 Prompt Engineering 的底层逻辑，能驾驭复杂的上下文交互。 有实际落地的 AI 工具、自动化流或效率提升项目经验。 ✨ 加分项 熟练掌握 LangChain、OpenClaw、Dify 等 Agent 编排框架与开发生态。 独立开发过高可用 Bot、RAG 知识库、自动化爬虫或复杂的脚本流程工具。 具备丰富的海外或主流 SaaS 生态集成经验（如 Google Sheets、Notion、Slack、Lark 等 API 深度对接）。 🤝 我们期待的你 👉 单兵作战王：能一个人 hold 住一整个工具的生命周期，而非局限于切图或写接口。 👉 业务合伙人：愿意走近业务，听得懂需求，比起“沉迷自嗨的技术研究”，更享受“技术真正赋能业务”的成就感。 👉 极客行动派：拥抱变化，对最新的 AI 落地实践有极高的敏锐度和折腾精神。
+   `
+  },
+  {
+    title: '高级安全攻防工程师（管理经验优先）',
+    category: 'test',
+    familyKey: '安全攻防',
+    salaryTag: 'negotiate',
+    remote: true,
+    company:"天玑 5人",
+    man: "",
+    note:"",
+    onsite: false,
+    salary: "35-70k",
+    duty: `
+    岗位职责
+负责公司网络安全攻防体系规划和团队日常管理。
+制定安全测试及红蓝对抗计划。
+组织对公司网站、APP、API、服务器和云环境进行授权渗透测试。
+负责重大安全事件的研判、指挥、止损、溯源和复盘。
+建立攻防测试授权、操作审计、漏洞分级和修复验收机制。
+协调运维、研发、测试、CDN及各公司技术负责人完成安全整改。
+评估新的攻击方式，并转化为内部防护方案。
+向CTO输出集团安全风险报告和重点整改建议。
+
+任职要求
+5年以上网络安全、渗透测试或应急响应经验。
+熟悉Web、API、APP、主机、容器、云环境的常见攻击面。
+能独立处理入侵、黑链、盗流、域名劫持、DNS污染、DDoS、数据泄露等事件。
+熟悉Linux、Nginx、CDN、WAF、MongoDB、Redis、Kafka等常见环境的安全风险。
+熟悉Go、Java、PHP中至少两种技术栈的代码安全问题。
+具备较强的跨团队推动和风险判断能力。
+有大型互联网业务、红蓝对抗或重大应急事件经验优先。
+    
+    `},
   {
     title: '编辑专员',
     category: 'jianji',
