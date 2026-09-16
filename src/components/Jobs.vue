@@ -256,7 +256,7 @@ const originJobs = ref([
 加分项：
 - 熟练使用ClaudeCode 、Codex等各种AI工具。
 - 有 RunPod、AWS、GCP 等云 GPU 平台使用经验，理解 Serverless、冷启动与弹性伸缩。
-- 有成人类 AIGC 或 AI 短剧项目落地经验。
+- 有AIGC 或 AI 短剧项目落地经验。
 - 在 GitHub 或技术社区有 AIGC 基础设施相关输出。
 - 有可视化节点画布或工作流编辑器开发经验。
 - 熟悉 ComfyUI 工作流 API 化改造，能导出 API 格式工作流并动态注入参数。
