@@ -1,6 +1,9 @@
 <template>
   <div class="float-actions">
     <!-- 返回顶部 -->
+    <button class="float-btn back-top" @click="onJd('Jobs')"  style="font-weight: bold;">
+     岗位JD
+    </button>
     <button class="float-btn back-top" @click="scrollToTop"  >
      到顶部
     </button>
@@ -16,6 +19,23 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const showBackTop = ref(false)
+
+const menuOpen = ref(false)
+
+const scrollToId = (id) => {
+  const el = document.getElementById(id)
+  if (!el) return
+  const headerHeight = 80
+  const top = el.offsetTop - headerHeight
+  window.scrollTo({ top, behavior: 'smooth' })
+}
+
+const onJd = (id) => {
+  menuOpen.value = false
+  scrollToId(id)
+}
+
+
 
 const scrollToTop = () => {
   window.scrollTo({
@@ -74,19 +94,48 @@ onUnmounted(() => {
 }
 
 .back-top {
-  background: transparent;
-  color: #28e0ff;
+  /* background: transparent; */
+  /* color: #28e0ff;
   border: 1px solid rgba(40, 224, 255, 0.35);
   box-shadow: none;
+  background: #28e0ff; */
+  width: 76px;
+  height: 56px;
+  border-radius: 12px;
+  border: none;
+  background: #28e0ff;
+  color: #0b101f;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(40, 224, 255, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .back-top:hover {
-  background: rgba(40, 224, 255, 0.08);
-  box-shadow: none;
+  /* background: rgba(40, 224, 255, 0.08);
+  box-shadow: none; */
+    transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(40, 224, 255, 0.5);
 }
 
 .app {
   min-height: 100vh;
   background-color: #0b101f;
+}
+/* ========== 移动端适配 ========== */
+@media (max-width: 768px) {
+  .float-actions {
+    right: 12px;
+    bottom: 12px;
+    gap: 8px;
+  }
+  .float-btn {
+    width: 60px;
+    height: 46px;
+    border-radius: 10px;
+    font-size: 12px;
+  }
 }
 </style>

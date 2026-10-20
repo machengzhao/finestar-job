@@ -28,13 +28,13 @@
       <!-- CONTACT 中间菜单2 -->
       <div class="footer-col">
         <h4 class="footer-title">CONTACT</h4>
-        <div class="footer-link">  TG  直招频道 <span class="red-text">@
+        <div class="footer-link">直招频道 <span class="red-text">@
               <a style="cursor: pointer;" class="float-btn contact" href="https://t.me/remote0007" target="_blank"  >
       remote0007
     </a>
 
         </span></div>
-        <div class="footer-link">HR直招Rocky <span class="red-text">
+        <div class="footer-link">HR直招 <span class="red-text">
                 <a style="cursor: pointer;" class="float-btn contact" href="https://t.me/remote0007_jobs" target="_blank"  >
       @remote0007_jobs
     </a>
@@ -130,5 +130,28 @@
   justify-content:space-between;
   font-size:16px;
   color:#78879e;
+}
+/* ========== 移动端适配 ========== */
+@media (max-width: 900px) {
+  .page-footer { padding: 40px 20px 24px; }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 28px;
+  }
+  .footer-title { font-size: 16px; margin-bottom: 14px; }
+  .footer-link { font-size: 15px; margin-bottom: 10px; }
+  .desc { font-size: 14px; }
+  .logo-text .en { font-size: 22px; }
+
+  .copyright {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 28px;
+    padding-top: 20px;
+  }
+  .right-txt { display: block; }
 }
 </style>

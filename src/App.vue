@@ -7,7 +7,7 @@
         <div id="AboutAs"></div><AboutAs class="about"/></div>
       <!-- 工作制度 -->
 
-      <div id="Time"><<Time/></div>
+      <div id="Time"><Time/></div>
       <!-- 团队优势 -->
       <div id="Team">
         <Team/> </div>
@@ -111,6 +111,81 @@ const displayJobs = computed(() => {
   background: #0b1122;
   color: #e4e8f0;
   /* padding: 24px; */
+}
+/* src/assets/responsive.css 或全局 main.css */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 通用容器 */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+.job-page {
+  background: #0b1122;
+  color: #e4e8f0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .con_box {
+    padding-top: 64px; /* 固定头部高度占位 */
+  }
+}
+/* * { outline: 1px solid red; }  */
+/* 测试每个元素盒子 */
+/* ========== 全局横向滚动兜底 ========== */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+  position: relative;
+}
+
+#app {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 防止长英文/URL 撑破 */
+p, h1, h2, h3, h4, h5, h6, span, div, li, a {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* 图片/媒体防溢出 */
+img, video, svg, canvas, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 通用容器移动端约束 */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    max-width: 100% !important;
+  }
 }
 </style>
  

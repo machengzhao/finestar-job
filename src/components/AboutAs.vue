@@ -263,4 +263,41 @@
   margin:0;
   line-height:1.6;
 }
+/* ========== 移动端适配 ========== */
+@media (max-width: 900px) {
+  .banner {
+    padding: 20px 20px 30px; /* 顶部给固定 header 留空间 */
+  }
+  .en-title { font-size: 30px; margin-top: 2rem !important; }
+  .cn-title { font-size: 16px; margin-bottom: 20px; }
+  .sub-text { font-size: 14px; letter-spacing: 3px; }
+  .tip-text { font-size: 16px; }
+
+  .about-section { padding: 50px 20px; }
+  .container {
+    grid-template-columns: 1fr;   /* 单列堆叠 */
+    gap: 40px;
+  }
+  .main-title { font-size: 20px; }
+  .en-subtitle { font-size: 15px; letter-spacing: 2px; }
+  .desc-text { font-size: 15px; line-height: 1.75; }
+
+  /* 统计数字 2x2 */
+  .stat-item { padding: 14px 16px; }
+  .stat-num { font-size: 38px; }
+  .plus, .unit { font-size: 18px; }
+  .stat-label { font-size: 13px; margin-top: 8px; }
+
+  /* 右侧业务 */
+  .business-item { padding: 20px 0; }
+  .biz-title { font-size: 17px; }
+  .biz-desc { font-size: 14px; }
+  .biz-icon { font-size: 22px; }
+}
+
+@media (max-width: 400px) {
+  .en-title { font-size: 26px; }
+  .stat-num { font-size: 30px; }
+  .stat-grid { grid-template-columns: 1fr; }  /* 极窄屏数字列表 */
+}
 </style>

@@ -27,8 +27,7 @@
           <h3 class="card-title">节假日</h3>
           <div class="card-en">HOLIDAYS</div>
           <ul class="card-list">
-            <li class="red">按 
-              中国大陆法定节假日 执行</li>
+            <li class="red">按法定节假日执行</li>
             <li>法定节日与调休安排提前公布</li>
             <li>多地枢纽节日互不影响交付</li>
             <li class="red">中国春节假期12天，年假12天，病假5天，陪产假+婚假</li>
@@ -185,5 +184,29 @@
 }
 .card-list .red{
   color: red;
+}
+/* ========== 移动端适配 ========== */
+@media (max-width: 1024px) {
+  .card-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .working-terms { padding: 50px 20px; }
+
+  .section-header { margin-bottom: 32px; }
+  .top-en { font-size: 13px; letter-spacing: 1.5px; }
+  .main-title { font-size: 20px; }
+  .sub-en { font-size: 14px; letter-spacing: 2px; margin-bottom: 14px; }
+  .desc { font-size: 15px; }
+
+  .card-grid {
+    grid-template-columns: 1fr;   /* 单列 */
+    gap: 16px;
+  }
+  .term-card { padding: 22px 18px; }
+  .card-icon { width: 44px; height: 44px; font-size: 20px; margin-bottom: 14px; }
+  .card-title { font-size: 18px; }
+  .card-en { font-size: 12px; margin-bottom: 16px; }
+  .card-list li { font-size: 14px; line-height: 1.9; }
 }
 </style>

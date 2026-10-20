@@ -199,4 +199,26 @@
   line-height:1.7;
   margin:0;
 }
+/* ========== 移动端适配 ========== */
+@media (max-width: 1024px) {
+  .card-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .why-lumenix { padding: 50px 20px; }
+
+  .section-header { margin-bottom: 32px; }
+  .top-en { font-size: 13px; }
+  .main-title { font-size: 20px; }
+  .sub-en { font-size: 14px; letter-spacing: 2px; }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .reason-card { padding: 22px 18px; }
+  .card-icon { width: 44px; height: 44px; font-size: 20px; }
+  .card-title { font-size: 18px; }
+  .card-desc { font-size: 14px; }
+}
 </style>
