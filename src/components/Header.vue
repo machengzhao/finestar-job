@@ -19,7 +19,7 @@
         <div class="nav-item" @click="handleNav('AboutAs')">关于我们</div>
         <div class="nav-item" @click="handleNav('Time')">工作制度</div>
         <div class="nav-item" @click="handleNav('Team')">团队优势</div>
-        <div class="nav-item" @click="handleNav('Jobs')">在招岗位</div>
+        <div class="nav-item" style="color: red;" @click="handleNav('Jobs')">在招岗位</div>
         <div class="nav-item" @click="handleNav('Contact')">联系我们</div>
       </nav>
     </div>
